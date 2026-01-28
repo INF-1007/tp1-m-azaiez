@@ -25,6 +25,9 @@ Prompts EXACTS :
 2) "Entrez la longueur horizontale (en metres) : "
 """
 
+# TODO: Validation
+# TODO: Calcul pente et angle
+# TODO: Affichage exact (+ ligne depassement si necessaire)
 import math
 
 try:

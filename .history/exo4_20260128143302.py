@@ -24,7 +24,10 @@ Prompts EXACTS :
 1) "Entrez la hauteur a franchir (en centimetres) : "
 2) "Entrez la longueur horizontale (en metres) : "
 """
+# TODO: Importer math
+# TODO: Lire hauteur_cm et longueur_m
 
+# TODO: Validation
 import math
 
 try:

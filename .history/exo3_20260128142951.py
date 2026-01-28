@@ -26,7 +26,6 @@ Prompts EXACTS :
 4) "Entrez le temps de controle a l'entree (en minutes) : "
 """
 
-# TODO: Importer math
 import math
 
 # TODO: Lire les 4 valeurs

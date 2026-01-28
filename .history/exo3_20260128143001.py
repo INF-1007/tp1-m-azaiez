@@ -27,7 +27,6 @@ Prompts EXACTS :
 """
 
 # TODO: Importer math
-import math
 
 # TODO: Lire les 4 valeurs
 distance = float(input("Entrez la distance jusqu'au CEPSUM (en kilometres) : "))
