@@ -84,5 +84,5 @@ else:
 
     print(f"Bonjour {nom}")
     print(f"Football (Carabins): {match_F_C} match(s), {hf}h{mf:02d} de visionnage")
-    print(f"Soccer (Carabins): {match_S_C} match(s), {hs}h{ms:02d} de visionnage")
-    print(f"Total: {ht}h{mt:02d}")
+    print(f"Soccer (Carabins) : {match_S_C} match(s), {hs}h{ms:02d} de visionnage")
+    print(f"Total : {ht}h{mt:02d}")
