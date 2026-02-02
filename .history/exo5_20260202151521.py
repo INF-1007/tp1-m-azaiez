@@ -61,39 +61,31 @@ if statut_etudiant == "O":
     forfait_5 *= 0.88
 else:
     pass
-# Limits calculation (allow overbuying by checking one extra pack)
-maxA = n // 24 + 1
-maxB = n // 12 + 1
-maxC = n // 5 + 1
+maxA = n // 24
+maxB = n // 12
+maxC = n // 5
 
 test = None
 for A in range(maxA + 1):
     for B in range(maxB + 1):
         for C in range(maxC + 1):
             billet_forfaits = (24 * A) + (12 * B) + (5 * C)
-            needed = n - billet_forfaits
-            if needed < 0:
-                needed = 0
-            D = needed
-
-            prix_final = (
-                (A * forfait_24) + (B * forfait_12) + (C * forfait_5) + (D * billet_uni)
-            )
-            total_billets = billet_forfaits + D
-
-            # Tuple comparison: Price (min), Total Tickets (min), Unit Tickets (min)
-            meilleure_issue = (prix_final, total_billets, D, A, B, C)
+            D = n - billet_forfaits
+            if D < 0:
+                D = 0
+            prix_final = (A * forfait_24) + (B * forfait_12) + (C * forfait_5) + (D * billet_uni)
+            meilleure_issue = (prix_final, n, A, B, C, D)
 
             if test is None or meilleure_issue < test:
                 test = meilleure_issue
 
-(prix_final, total_billets, D, A, B, C) = test
+(prix_final, n, A, B, C, D) = test
 
 # TODO: Calculer et afficher le resultat exact (6 lignes)
 
 print("Forfaits de 24 billets -", A)
 print("Forfaits de 12 billets -", B)
 print("Forfaits de 5 billets -", C)
-print("Billets unitaires -", D)
-print("Total billets -", total_billets)
-print(f"Prix total - {prix_final:.2f}$")
+print("Billets unitaires -",D)
+print("Total billets -",n)
+print("Prix total - ",prix_final,"$")
